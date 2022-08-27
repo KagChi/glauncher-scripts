@@ -10,3 +10,6 @@
 [![Discord](https://discordapp.com/api/guilds/785715968608567297/embed.png)](https://nezu.my.id)
 
 </div>
+
+## To transpile the code
+- Use `npm run build` or `yarn build` to transpile ts files to lua
