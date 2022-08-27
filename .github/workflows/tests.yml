@@ -1,0 +1,29 @@
+name: Test code CI
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: "Install deps"
+    - run: npm install
+    - name: "Lint code" 
+    - run: npm run lint
+    - name: "Build code"
+    - run: npm run build

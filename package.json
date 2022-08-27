@@ -1,7 +1,7 @@
 {
   "name": "glauncher-scripts",
   "version": "1.0.0",
-  "description": "A Collection of usefull GrowLauncher scripts written in typescript.",
+  "description": "A Collection of useful GrowLauncher scripts written in typescript.",
   "main": "dist",
   "type": "module",
   "author": "KagChi",
