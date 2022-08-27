@@ -21,9 +21,6 @@ jobs:
       uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: "Install deps"
-    - run: npm install
-    - name: "Lint code" 
+    - run: npm install 
     - run: npm run lint
-    - name: "Build code"
     - run: npm run build
